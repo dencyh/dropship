@@ -1,0 +1,5 @@
+.DS_Store
+.idea/
+.venv/
+/src/__pycache__
+result.xlsx

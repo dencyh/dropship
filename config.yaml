@@ -1,0 +1,8 @@
+# Папка, где лежат файлы, из которых будем собирать данные
+input_folder: './input_data'
+# Начальная часть имени, по которой определяем файл с заказами
+order_file_prefix: 'logisticRequests'
+# Начальная часть имени, по которой определяем файл с расписанием
+schedule_file_prefix: 'schedules'
+# Пусть до файла с результатом
+output_file: './result.xlsx'
