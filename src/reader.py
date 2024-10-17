@@ -8,6 +8,7 @@ cfg = Config()
 input_folder = cfg.get('input_folder')
 order_file_prefix = cfg.get('order_file_prefix')
 schedule_file_prefix = cfg.get('schedule_file_prefix')
+base_path = cfg.get('base_path')
 
 
 def get_schedules() -> List[Schedule]:
@@ -44,9 +45,10 @@ def extract_data_from_xlsx(file_path: str, data_class: Type) -> List:
 
 def find_file_by_prefix(directory, prefix):
     # List all files in the directory
+    directory = os.path.join(base_path, directory)
     for filename in os.listdir(directory):
         if filename.startswith(prefix):
             # returns full path to the file
             return os.path.join(directory, filename)
     # if file not found
-    raise FileNotFoundError(f'Не найден файл, который начинается на ${prefix} в папке ${directory}.')
+    raise FileNotFoundError(f'Не найден файл, который начинается на {prefix} в папке ${directory}')

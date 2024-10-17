@@ -3,3 +3,6 @@
 .venv/
 /src/__pycache__
 result.xlsx
+build
+dist
+main.spec
